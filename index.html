@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Information</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <script>
+        let bookData = {
+            "books": [
+                {
+                    "title": "The Great Gatsby",
+                    "author": "F. Scott Fitzgerald",
+                    "publicationYear": 1925,
+                    "genres": ["Fiction", "Classics"]
+                },
+                {
+                    "title": "To Kill a Mockingbird",
+                    "author": "Harper Lee",
+                    "publicationYear": 1960,
+                    "genres": ["Fiction", "Coming-of-Age"]
+                }
+            ]
+        };
+
+        //Display first book title
+        console.log("First Book Title: " + bookData.books[0].title);
+
+        //Display author of the second book
+        console.log("Second Book Author: " + bookData.books[1].author);
+
+        //Display genres of all books
+        console.log("Genres of All Books:");
+
+        bookData.books.forEach(function(book) {
+            console.log(book.genres);
+        });
+    </script>
+
+</body>
+</html>
